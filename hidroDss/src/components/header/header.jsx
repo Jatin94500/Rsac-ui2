@@ -1,12 +1,14 @@
 import "./header.css"
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 function Header() {
     return (
         <header className="header">
             <nav>
-                <div id="header-content">
-                    <h1 className="header-title">
+                <MenuIcon className="menu-icon" />
+                <div className="header-content">
+                    <h1 id="header-title">
                         <span style={{ color: "blue", }}>HYDROLOGY</span>
                         <span style={{ color: "green" }}>DSS</span>
                         <span style={{ color: "blue" }}>PLATFORM</span>
