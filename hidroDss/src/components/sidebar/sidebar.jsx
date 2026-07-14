@@ -3,24 +3,29 @@ import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-function Sidebar() {
-    const [isOpen, setIsOpen] = useState(false);
+function Sidebar({ isOpen, setIsOpen }) {
+
     return (
         <>
-            <button
-                className="sidebar-toggle"
-                aria-label={isOpen ? "Close menu" : "Open menu"}
-                aria-expand={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <span className=""><MenuIcon /></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+
+            <nav className={isOpen ? "sidebar open" : "sidebar"}>
+                <div className="header-content">
+                    <img
+                        src="/vecteezy_hydroponic-logo-vector-template-illustration_16081435.webp"
+                        alt=" Logo"
+                        className="logo"
+
+                    />
+                    <h1 id="header-title">
+                        <span style={{ color: "lightblue" }}>HYDROLOGY</span>
+                        <span style={{ color: "green" }}>DSS</span>
+                        <span style={{ color: "lightblue" }}>PLATFORM</span>
+                    </h1>
+                    <h3 id="header-subtitle">
+                        <span style={{ color: "white" }}>Smart Decision </span>
+                        <span style={{ color: "white" }}>Sustainable Water Future</span>
+                    </h3>
+                </div>
 
             </nav>
 
