@@ -1,0 +1,294 @@
+/* ======================================
+   TimeSeries Component Styles
+   ====================================== */
+
+/* ---------- Wrapper & Card ---------- */
+.ts-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.ts-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.04),
+        0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.2s ease;
+}
+
+.ts-card:hover {
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.06),
+        0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Header ---------- */
+.ts-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.ts-title-group {
+    flex: 1;
+    min-width: 0;
+}
+
+.ts-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.ts-subtitle {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin: 0.25rem 0 0 0;
+    font-weight: 400;
+}
+
+/* ---------- Dropdown Area ---------- */
+.ts-dropdown-area {
+    position: relative;
+    min-width: 200px;
+}
+
+.ts-dropdown-label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ---------- Trigger Button ---------- */
+.ts-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1e293b;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    outline: none;
+    text-align: left;
+    font-family: inherit;
+}
+
+.ts-dropdown-trigger:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.ts-dropdown-trigger:focus-visible {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.ts-dropdown-trigger--open {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+    background: #ffffff;
+}
+
+.ts-dropdown-trigger-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ---------- Chevron ---------- */
+.ts-dropdown-chevron {
+    flex-shrink: 0;
+    color: #94a3b8;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ts-dropdown-chevron--open {
+    transform: rotate(180deg);
+    color: #3b82f6;
+}
+
+/* ---------- Dropdown Panel ---------- */
+.ts-dropdown-panel {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.07),
+        0 10px 20px -2px rgba(0, 0, 0, 0.06),
+        0 0 0 1px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    animation: ts-dropdown-enter 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes ts-dropdown-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-4px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ---------- Search ---------- */
+.ts-dropdown-search-wrap {
+    position: relative;
+    padding: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ts-dropdown-search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.ts-dropdown-search {
+    width: 100%;
+    padding: 0.45rem 0.6rem 0.45rem 2rem;
+    font-size: 0.825rem;
+    color: #1e293b;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.15s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.ts-dropdown-search::placeholder {
+    color: #a0aec0;
+}
+
+.ts-dropdown-search:focus {
+    background: #ffffff;
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* ---------- Options List ---------- */
+.ts-dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0;
+    max-height: 220px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.ts-dropdown-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ts-dropdown-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ts-dropdown-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+.ts-dropdown-list::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ---------- Dropdown Item ---------- */
+.ts-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    margin: 0 0.25rem;
+    font-size: 0.835rem;
+    color: #334155;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    user-select: none;
+}
+
+.ts-dropdown-item--highlighted {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.ts-dropdown-item--selected {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.ts-dropdown-item--selected.ts-dropdown-item--highlighted {
+    background: #eff6ff;
+}
+
+.ts-dropdown-item-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ts-dropdown-item-check {
+    flex-shrink: 0;
+    color: #3b82f6;
+    margin-left: 0.5rem;
+}
+
+/* ---------- Empty state ---------- */
+.ts-dropdown-empty {
+    padding: 1.25rem 0.75rem;
+    font-size: 0.825rem;
+    color: #94a3b8;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ---------- Footer ---------- */
+.ts-dropdown-footer {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-align: right;
+    border-top: 1px solid #f1f5f9;
+    background: #fafbfc;
+}
+
+/* ---------- Chart ---------- */
+.ts-chart-container {
+    margin-top: 0.5rem;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 0.5rem;
+}
