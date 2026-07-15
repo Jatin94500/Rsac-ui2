@@ -1,8 +1,9 @@
 import "./sidebar.css";
 import React, { useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
 import WindowIcon from '@mui/icons-material/Window';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import SideDropdown from "../SideDropdown/SideDropdown";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 
 
 function Sidebar({ isOpen, setIsOpen }) {
@@ -41,9 +42,33 @@ function Sidebar({ isOpen, setIsOpen }) {
 
                     </div>
                     <div className="Sidebar-Sub-menu">
-                        <h1 className="h-10 bg-green-500">DataSet Explorer</h1>
-                        <div>
-
+                        <h1 className="h-2 ml-6">Data Explorer</h1>
+                        <div style={{ marginLeft: "1rem", display: "flex", flexDirection: "column", gap: "1rem", marginTop: "2rem" }}>
+                            <SideDropdown title="Chrisp Rainfall" className="" >
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                            </SideDropdown>
+                            <SideDropdown title="ERAS Climate" >
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                            </SideDropdown>
+                            <SideDropdown title="SMAP Soil Moisture" >
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                            </SideDropdown>
+                            <SideDropdown title="SoilGrid" >
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                            </SideDropdown>
+                            <SideDropdown title="IMD Rainfall" >
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                            </SideDropdown>
                         </div>
                     </div>
                 </div>
