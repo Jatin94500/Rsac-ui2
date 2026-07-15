@@ -1,6 +1,8 @@
 import "./sidebar.css";
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
+import WindowIcon from '@mui/icons-material/Window';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 
 
 function Sidebar({ isOpen, setIsOpen }) {
@@ -25,8 +27,25 @@ function Sidebar({ isOpen, setIsOpen }) {
                         <span style={{ color: "white" }}>Hydrology DSS Program</span>
                     </h3>
                 </div>
-                <div>
+                <div className="Sidebar-menu">
+                    <div >
+                        <WindowIcon sx={{ fontSize: 27, color: '#3b82f6', margin: "0.9rem" }} />
+                        <span style={{ fontSize: "1rem", color: "white" }}>Dashboard</span>
 
+
+                    </div>
+                    <div >
+                        <AddLocationAltIcon sx={{ fontSize: 27, color: '#3b82f6', margin: "0.9rem" }} />
+                        <span style={{ fontSize: "1rem", color: "white" }}>Intercative Map</span>
+
+
+                    </div>
+                    <div className="Sidebar-Sub-menu">
+                        <h1 className="h-10 bg-green-500">DataSet Explorer</h1>
+                        <div>
+
+                        </div>
+                    </div>
                 </div>
 
             </nav>
