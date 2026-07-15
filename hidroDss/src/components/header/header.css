@@ -1,33 +1,39 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background: white;
     position: sticky;
     top: 0;
     z-index: 30;
 }
+
 .header-content {
     display: flex;
     flex-direction: column;
     line-height: 0.3;
 }
+
 #header-title {
     font-size: 1.2rem;
     line-height: 0.5;
     margin-top: 5px;
+    font-weight: bold;
 }
+
 #header-subtitle {
     font-size: 0.7rem;
     margin-top: 0.7rem;
 }
+
 .header-nav {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
+
 .header-hamburger {
     display: flex;
     align-items: center;
@@ -41,6 +47,7 @@
     cursor: pointer;
     transition: background 0.12s ease;
 }
+
 .header-hamburger:hover {
     background: #f2f4f7;
 }
