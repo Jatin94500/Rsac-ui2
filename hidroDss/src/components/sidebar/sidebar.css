@@ -62,7 +62,7 @@
     transition: transform 0.3s ease;
     z-index: 900;
     position: fixed;
-    zoom: 0.8;
+    zoom: 0.7;
 
     /* Below toggle button */
 }
@@ -80,7 +80,7 @@
 }
 
 .main-content.sidebar-open {
-    margin-left: 200px;
+    margin-left: 175px;
 }
 
 /* Prevent body scroll when sidebar open */

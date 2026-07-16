@@ -7,7 +7,7 @@ function SideDropdown({ title, children, icon }) {
         <div className="relative"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}>
-            <button className="w-full flex items-center justify-between py-0.5 px-2 
+            <button className="w-full flex items-center justify-between py-0.5 px-2  
             text-white hover:bg-slate-700 rounded-md transition-colors
             bg-[#102c51]">
 
@@ -23,7 +23,7 @@ function SideDropdown({ title, children, icon }) {
 
             <div
                 className={`
-                    absolute left-full top-0 ml-2 w-48 bg-slate-800 rounded-md shadow-lg border border-slate-700
+                    absolute left-full top-0 ml-2 w-48 ml-2 mr-2 bg-slate-800 rounded-md shadow-lg border border-slate-700
                     transition-all duration-200 origin-left
                     ${isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}
                 `}

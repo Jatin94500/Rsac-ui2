@@ -45,7 +45,7 @@ function Sidebar({ isOpen, setIsOpen }) {
                         </div>
                     </div>
                     <div className="Sidebar-Sub-menu">
-                        <div className="bg-[#011d3c] rounded-xl pb-2 pt-1.5  gap-x-0 gap-y-4">
+                        <div className="bg-[#011d3c] rounded-xl pb-2 pt-1.5 ml-2 mr-2  gap-x-0 gap-y-4">
                             <h1 className="text-xs text-slate-300 font-bold ml-4 mt-2 mb-1 uppercase tracking-wider">Data Explorer</h1>
                             <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh", fontSize: "2vh" }}>
                                 <SideDropdown title="Chrisp Rainfall" >
@@ -75,7 +75,7 @@ function Sidebar({ isOpen, setIsOpen }) {
                                 </SideDropdown>
                             </div>
                         </div>
-                        <div className="bg-[#011d3c] rounded-xl pb-2">
+                        <div className="bg-[#011d3c] rounded-xl pb-2 ml-2 mr-2  mt-1 pt-2">
                             <h1 className="text-xs text-slate-300 font-bold ml-4 mt-2 mb-1 uppercase tracking-wider">Hydrology Analysis</h1>
                             <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh" }}>
                                 <SideDropdown title="Chrisp Rainfall" >
@@ -105,7 +105,7 @@ function Sidebar({ isOpen, setIsOpen }) {
                                 </SideDropdown>
                             </div>
                         </div>
-                        <div className="bg-[#011d3c] rounded-xl pb-2">
+                        <div className="bg-[#011d3c] rounded-xl pb-2 ml-2 mr-2 mt-1 pt-2">
                             <h1 className="text-xs text-slate-300 font-bold ml-4 mt-2 mb-1 uppercase tracking-wider">Discison Support System</h1>
                             <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh" }}>
                                 <SideDropdown title="Drought DSS" >
