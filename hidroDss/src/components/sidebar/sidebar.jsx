@@ -157,7 +157,7 @@ function Sidebar({ isOpen, setIsOpen }) {
 
 
                     </div>
-                    <div className=" mt-2 bg-[#011d3c] rounded-xl pb-2 ml-2 mr-2 ">
+                    <div className=" mt-2 bg-[#011d3c] rounded-xl pb-1 ml-2 mr-2 ">
                         <button
                             onClick={() => alert("Going to System Settings!")}
                             className="w-full flex items-center py-2 hover:bg-slate-700 transition-colors"
