@@ -14,7 +14,7 @@ function App() {
 
         <Header onToggleSidebar={() => setIsOpen(!isOpen)} />
         <Upper />
-        <Body />
+       <Body /> 
       </div>
 
     </>
