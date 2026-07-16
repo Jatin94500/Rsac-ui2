@@ -13,19 +13,18 @@
 .header-content {
     display: flex;
     flex-direction: column;
-    line-height: 0.3;
+    justify-content: center;
 }
 
 #header-title {
     font-size: 1.2rem;
-    line-height: 0.5;
-    margin-top: 5px;
+    margin-top: 6px;
     font-weight: bold;
 }
 
 #header-subtitle {
     font-size: 0.7rem;
-    margin-top: 0.7rem;
+    margin-top: -0.2rem;
 }
 
 .header-nav {
