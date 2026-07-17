@@ -1,10 +1,10 @@
 
 
-function Chrips(){
+function Chrips() {
 
-    return(
+    return (
 
-        <div> handleClickOutside</div>
+        <div> </div>
     );
 
 

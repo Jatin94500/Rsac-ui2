@@ -2,22 +2,27 @@ import TimeSeries from "../charts/TimeSeries";
 import Map from "../Map/map";
 import "./body.css";
 import Datasetsummary from "../DatasetSummary/datasetsummary";
-
+import Chrips from "../chirps/Chrips"
+import Rainfall from "../RainfallStatistics/Rainfall"
+import RainfallAnomaly from "../RainfallAnomaly/RainfallAnomaly"
 function Body() {
     return (
 
-        <div className="body-container">
-            <section className="bg-white border border-slate-200 shadow-sm rounded-xl p-2 w-[40%] h-full z-10" >
-                <Map />
-            </section>
+        <div className="flex">
 
-            <section className="bg-white border border-slate-200 shadow-sm rounded-xl w-fit h-fit overflow-hidden ml-[1]">
+            <section><Chrips /> </section>
+            <section className="bg-white border border-slate-200 shadow-sm rounded-xl p-2 w-l lg:w-2/3 h-[500px]" >
+                <Map />
+
+            </section>
+            <section className="bg-white border border-slate-200 shadow-sm rounded-xl py-6 px-6 w-full h-full ">
                 <TimeSeries />
             </section>
-
-            <section className="bg-white border border-slate-200 shadow-sm rounded-xl w-[20%] h-fit overflow-hidden">
+            <section>
                 <Datasetsummary />
             </section>
+            <section><Rainfall /></section>
+            <section><RainfallAnomaly /></section>
 
 
 
