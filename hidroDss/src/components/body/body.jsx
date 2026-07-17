@@ -20,29 +20,16 @@ function Body() {
             <section className="bg-white border border-slate-200 shadow-sm rounded-xl w-[20%] h-fit overflow-hidden">
                 <Datasetsummary />
             </section>
-
-
-
-
-
-
-
-=======
-        <div className="flex">
-            <section className="bg-white border border-slate-200 shadow-sm rounded-xl py-12 px-6 max-w-5xl mx-auto my-8"><TimeSeries /></section>
-
-
-
-
-            {/* <section><Map/></section>
-                    <section></section>
-                    <section></section>
-                    <section></section>
-                    <section></section>
-                    <section></section>
-                    <section></section>
-                    <section></section> */}
         </div>
-    )
+
+
+
+
+
+
+
+
+
+    );
 }
 export default Body;
