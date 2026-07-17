@@ -26,7 +26,7 @@ const upper = () => {
           <span className='text-green-200 text-[10px]'>+8% vs Yesterday</span>
         </div>
         <div className='flex justify-center items-center'>
-          <ThunderstormOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+          <ThunderstormOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
         </div>
       </div>
 
@@ -37,7 +37,7 @@ const upper = () => {
           <span className='text-purple-200 text-[10px]'>-3% vs Yesterday</span>
         </div>
         <div className='flex justify-center items-center'>
-          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
         </div>
       </div>
 
@@ -48,7 +48,7 @@ const upper = () => {
           <span className='text-orange-200 text-[10px]'>View All Alerts</span>
         </div>
         <div className='flex justify-center items-center'>
-          <WarningOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+          <WarningOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const upper = () => {
           <span className='text-teal-200 text-[10px]'>High Risk</span>
         </div>
         <div className='flex justify-center items-center'>
-          <WaterOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+          <WaterOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const upper = () => {
           <span className='text-blue-200 text-[10px]'>Surplus</span>
         </div>
         <div className='flex justify-center items-center'>
-          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
         </div>
       </div>
 

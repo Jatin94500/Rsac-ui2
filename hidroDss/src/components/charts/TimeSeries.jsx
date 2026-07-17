@@ -181,13 +181,13 @@ function TimeSeries() {
     }
 
     return (
-        <div className="ts-wrapper flex gap-10">
-            <div className="ts-card">
+        <div className="ts-wrapper h-full w-full !p-0">
+            <div className="ts-card h-full w-full flex flex-col justify-between">
                 {/* Header Row */}
                 <div className="ts-header">
                     <div className="ts-title-group">
-                        <h2 className="ts-title">Time Series — Uttar Pradesh</h2>
-                        <p className="ts-subtitle">Monthly rainfall distribution by district</p>
+                        <h2 className="ts-title text-sm font-bold">Time Series — Uttar Pradesh</h2>
+                        <p className="ts-subtitle text-sm font-bold">Monthly rainfall distribution by district</p>
                     </div>
 
                     {/* Dropdown */}
@@ -269,11 +269,11 @@ function TimeSeries() {
                 </div>
 
                 {/* Chart */}
-                <div className="ts-chart-container" style={{ width: '100%', height: '100%' }}>
+                <div className="ts-chart-container" style={{ width: '100%', height: '50%' }}>
                     <BarChart
                         xAxis={[{ data: ['group A', 'group B', 'group C'] }]}
                         series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
-                        height={240}
+                        height={160}
                         margin={{ top: 10, right: 10, bottom: 20, left: 20 }}
                     />
                 </div>

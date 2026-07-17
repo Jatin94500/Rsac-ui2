@@ -5,8 +5,8 @@ import LocationPinIcon from '@mui/icons-material/LocationPin';
 function Map() {
     const position = [26.8467, 80.9462]
     return (
-        <div className="w-full h-full rounded-xl overflow-hidden z-10">
-            <MapContainer center={position} zoom={6} scrollWheelZoom={true} className="w-full h-full min-h-[400px]">
+        <div className="w-full h-full rounded-xl overflow-hidden z-0">
+            <MapContainer center={position} zoom={5} scrollWheelZoom={true} style={{ height: '100%', width: '100%' }}>
                 <TileLayer
                     attribution={`&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`}
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
