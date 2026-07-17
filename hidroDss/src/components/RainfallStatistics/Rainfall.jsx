@@ -7,7 +7,7 @@ const Rainfall = () => {
   ];
 
   return (
-    <div className="border soild border-black mt-4 rounded-xl">
+    <div className="border soild border-grey mt-4 rounded-xl">
       <h1 className="text-blue-800 font-medium whitespace-nowrap p-2">Rainfall Statistics(10 Jun 2025)</h1>
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }} className="flex-1 p-2">
         {square.map((item) => (
