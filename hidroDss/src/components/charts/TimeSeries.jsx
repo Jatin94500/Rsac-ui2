@@ -269,11 +269,12 @@ function TimeSeries() {
                 </div>
 
                 {/* Chart */}
-                <div className="ts-chart-container">
+                <div className="ts-chart-container" style={{ width: '100%', height: '100%' }}>
                     <BarChart
                         xAxis={[{ data: ['group A', 'group B', 'group C'] }]}
                         series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
-                        height={300}
+                        height={240}
+                        margin={{ top: 10, right: 10, bottom: 20, left: 20 }}
                     />
                 </div>
             </div>

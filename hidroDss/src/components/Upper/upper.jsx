@@ -6,93 +6,74 @@ import WarningOutlinedIcon from '@mui/icons-material/WarningOutlined';
 import WaterOutlinedIcon from '@mui/icons-material/WaterOutlined';
 const upper = () => {
   return (
-    <div className='flex  whitespace-nowrap w-50%'>
-        
-      <div className='bg-blue-600 m-1.5 rounded-2xl flex '>
-     <div className='flex flex-col p-3 whitespace-nowrap'>
-        <span className='text-gray-100 whitespace-nowrap'> Total Watersheds</span>
-        <h1 className='text-gray-100 text-2xl whitespace-nowrap font-bold'>1,248</h1>
-        <span className='text-gray-100 whitespace-nowrap'>+12 This Month</span>
-     </div>
-     <div className='justify-center items-center flex  '>
+    <div className='flex w-full gap-3 px-2 pt-2.5'>
 
-  <BarChartOutlinedIcon className='text-white ' sx={{ fontSize: 64 }} />
-
-
-     </div>
+      <div className='bg-blue-600 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-3'>
+        <div className='flex flex-col'>
+          <span className='text-gray-100 text-xs font-semibold'>Total Watersheds</span>
+          <h1 className='text-white text-lg font-bold my-1'>1,248</h1>
+          <span className='text-blue-200 text-[10px]'>+12 This Month</span>
+        </div>
+        <div className='flex justify-center items-center'>
+          <BarChartOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+        </div>
       </div>
 
-      <div className='bg-green-600 m-1.5 rounded-2xl flex '>
-     <div className='flex flex-col p-3 whitespace-nowrap'>
-        <span className='text-gray-100 whitespace-nowrap'> Total Rainfall(Today)</span>
-        <h1 className='text-gray-100 text-2xl whitespace-nowrap font-bold'>24.8 mm</h1>
-        <span className='text-gray-100 whitespace-nowrap'> +8% vs Yesterday</span>
-     </div>
-     <div className='justify-center items-center flex  '>
-
-  <ThunderstormOutlinedIcon className='text-white bg ' sx={{ fontSize: 64 }} />
-
-
-     </div>
+      <div className='bg-green-600 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-3'>
+        <div className='flex flex-col'>
+          <span className='text-gray-100 text-xs font-semibold'>Total Rainfall</span>
+          <h1 className='text-white text-lg font-bold my-1'>24.8 mm</h1>
+          <span className='text-green-200 text-[10px]'>+8% vs Yesterday</span>
+        </div>
+        <div className='flex justify-center items-center'>
+          <ThunderstormOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+        </div>
       </div>
-   
 
-      <div className='bg-purple-500 m-1.5 rounded-2xl flex '>
-     <div className='flex flex-col p-3 whitespace-nowrap'>
-        <span className='text-gray-100 whitespace-nowrap'>Soil Moisture(Avg)</span>
-        <h1 className='text-gray-100 text-2xl whitespace-nowrap font-bold'>28.6%</h1>
-        <span className='text-gray-100 whitespace-nowrap'> -3% vs Yesterday</span>
-     </div>
-     <div className='justify-center items-center flex  '>
-
-  < OpacityOutlinedIcon className='text-white bg ' sx={{ fontSize: 63 }} />
-
-
-     </div>
-      </div> 
-      
-
-      <div className='bg-orange-400 m-1.5 rounded-2xl flex '>
-     <div className='flex flex-col p-3 whitespace-nowrap'>
-        <span className='text-gray-100 whitespace-nowrap'>Active Alerts</span>
-        <h1 className='text-gray-100 text-xl font-bold whitespace-nowrap'>07</h1>
-        <span className='text-gray-100 whitespace-nowrap'> View All Alerts</span>
-     </div>
-     <div className='justify-center items-center flex  '>
-
-  < WarningOutlinedIcon className='text-white bg ' sx={{ fontSize: 63 }} />
-
-
-     </div>
-      </div> 
-
-            <div className='bg-teal-500 m-1.5 rounded-2xl flex '>
-     <div className='flex flex-col p-3 whitespace-nowrap'>
-        <span className='text-gray-100 whitespace-nowrap'>Flood Risk Areas</span>
-        <h1 className='text-gray-100 text-xl font-bold whitespace-nowrap'>15</h1>
-        <span className='text-gray-100 whitespace-nowrap'> High Risk</span>
-     </div>
-     <div className='justify-center items-center flex  '>
-
-  < WaterOutlinedIcon className='text-white bg ' sx={{ fontSize: 63 }} />
-
-
-     </div>
-      </div> 
-
-      <div className='bg-blue-600 m-1.5 rounded-2xl flex '>
-     <div className='flex flex-col p-3 whitespace-nowrap'>
-        <span className='text-gray-100 whitespace-nowrap'> Water Balance (This Month)</span>
-        <h1 className='text-gray-100 text-2xl whitespace-nowrap font-bold'>+6.9 mm </h1>
-        <span className='text-gray-100 whitespace-nowrap'>Surplus</span>
-     </div>
-     <div className='justify-center items-center flex  '>
-
-  <OpacityOutlinedIcon className='text-white ' sx={{ fontSize: 64 }} />
-
-
-     </div>
+      <div className='bg-purple-500 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-3'>
+        <div className='flex flex-col'>
+          <span className='text-gray-100 text-xs font-semibold'>Soil Moisture</span>
+          <h1 className='text-white text-lg font-bold my-1'>28.6%</h1>
+          <span className='text-purple-200 text-[10px]'>-3% vs Yesterday</span>
+        </div>
+        <div className='flex justify-center items-center'>
+          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+        </div>
       </div>
+
+      <div className='bg-orange-400 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-3'>
+        <div className='flex flex-col'>
+          <span className='text-gray-100 text-xs font-semibold'>Active Alerts</span>
+          <h1 className='text-white text-lg font-bold my-1'>07</h1>
+          <span className='text-orange-200 text-[10px]'>View All Alerts</span>
+        </div>
+        <div className='flex justify-center items-center'>
+          <WarningOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+        </div>
+      </div>
+
+      <div className='bg-teal-500 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-3'>
+        <div className='flex flex-col'>
+          <span className='text-gray-100 text-xs font-semibold'>Flood Risk</span>
+          <h1 className='text-white text-lg font-bold my-1'>15</h1>
+          <span className='text-teal-200 text-[10px]'>High Risk</span>
+        </div>
+        <div className='flex justify-center items-center'>
+          <WaterOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+        </div>
+      </div>
+
+      <div className='bg-blue-600 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-3'>
+        <div className='flex flex-col'>
+          <span className='text-gray-100 text-xs font-semibold'>Water Balance</span>
+          <h1 className='text-white text-lg font-bold my-1'>+6.9 mm</h1>
+          <span className='text-blue-200 text-[10px]'>Surplus</span>
+        </div>
+        <div className='flex justify-center items-center'>
+          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 36 }} />
+        </div>
+      </div>
+
     </div>
   )
 }

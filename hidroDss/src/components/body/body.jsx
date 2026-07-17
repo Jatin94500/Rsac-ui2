@@ -6,16 +6,19 @@ import Datasetsummary from "../DatasetSummary/datasetsummary";
 function Body() {
     return (
 
-        <div className="flex">
-
-            <section className="bg-white border border-slate-200 shadow-sm rounded-xl p-2 w-l lg:w-2/3 h-[500px]" >
+        <div className="body-container">
+            {/* Map Section */}
+            <section className="bg-white border border-slate-200 shadow-sm rounded-xl p-2 w-[40%] h-full z-10" >
                 <Map />
-
             </section>
-            <section className="bg-white border border-slate-200 shadow-sm rounded-xl py-6 px-6 w-full h-full">
+
+            {/* Chart Section */}
+            <section className="bg-white border border-slate-200 shadow-sm rounded-xl w-fit h-fit overflow-hidden ml-[1]">
                 <TimeSeries />
             </section>
-            <section>
+
+            {/* Summary Section */}
+            <section className="bg-white border border-slate-200 shadow-sm rounded-xl w-[20%] h-fit overflow-hidden">
                 <Datasetsummary />
             </section>
 
