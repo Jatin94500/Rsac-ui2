@@ -1,10 +1,9 @@
 import TimeSeries from "../charts/TimeSeries";
-import Map from "../Map/map";
 import "./body.css";
-import Datasetsummary from "../DatasetSummary/datasetsummary";
 
 function Body() {
     return (
+
 
         <div className="body-container">
             {/* Map Section */}
@@ -28,11 +27,22 @@ function Body() {
 
 
 
+=======
+        <div className="flex">
+            <section className="bg-white border border-slate-200 shadow-sm rounded-xl py-12 px-6 max-w-5xl mx-auto my-8"><TimeSeries /></section>
 
 
 
 
+            {/* <section><Map/></section>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                    <section></section> */}
         </div>
-    );
+    )
 }
 export default Body;
