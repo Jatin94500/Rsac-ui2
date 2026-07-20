@@ -12,12 +12,13 @@ function Header({ onToggleSidebar }) {
                 </button>
                 <div className="header-content">
                     <h1 id="header-title">
-                        <span style={{ color: "blue" }}>HYDROLOGY</span>
-                        <span style={{ color: "green" }}>DSS</span>
+                        <span style={{ color: "blue" }}>HYDROLOGY  </span>
+                        <span style={{ color: "green" }}>DSS </span>
                         <span style={{ color: "blue" }}>PLATFORM</span>
                     </h1>
                     <h3 id="header-subtitle">
                         <span style={{ color: "blue" }}>Smart Decision </span>
+                        <span style={{ color: "blue" }}>●</span>
                         <span style={{ color: "blue" }}>Sustainable Water Future</span>
                     </h3>
                 </div>

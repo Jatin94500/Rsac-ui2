@@ -4,18 +4,18 @@ import ThunderstormOutlinedIcon from '@mui/icons-material/ThunderstormOutlined';
 import OpacityOutlinedIcon from '@mui/icons-material/OpacityOutlined';
 import WarningOutlinedIcon from '@mui/icons-material/WarningOutlined';
 import WaterOutlinedIcon from '@mui/icons-material/WaterOutlined';
-const upper = () => {
+const upper = ({ className }) => {
   return (
-    <div className='flex w-full gap-3 px-2 pt-2.5 '>
+    <div className={`flex w-full gap-3 px-1 pt-2.5 ${className || 'h-[20%]'}`}>
 
-      <div className='bg-blue-600 rounded-2xl flex flex-1 justify-between items-center overflow-hidden p-2'>
+      <div className='bg-blue-600 rounded-2xl  flex flex-1 justify-between items-center overflow-hidden p-2'>
         <div className='flex flex-col'>
           <span className='text-gray-100 text-[10px] font-semibold'>Total Watersheds</span>
           <h1 className='text-white text-lg font-bold my-1'>1,248</h1>
           <span className='text-blue-200 text-[10px]'>+12 This Month</span>
         </div>
         <div className='flex justify-center items-center'>
-          <BarChartOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
+          <BarChartOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 50 }} />
         </div>
       </div>
 
@@ -26,7 +26,7 @@ const upper = () => {
           <span className='text-green-200 text-[10px]'>+8% vs Yesterday</span>
         </div>
         <div className='flex justify-center items-center'>
-          <ThunderstormOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
+          <ThunderstormOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 50 }} />
         </div>
       </div>
 
@@ -37,7 +37,7 @@ const upper = () => {
           <span className='text-purple-200 text-[10px]'>-3% vs Yesterday</span>
         </div>
         <div className='flex justify-center items-center'>
-          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
+          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 50 }} />
         </div>
       </div>
 
@@ -48,7 +48,7 @@ const upper = () => {
           <span className='text-orange-200 text-[10px]'>View All Alerts</span>
         </div>
         <div className='flex justify-center items-center'>
-          <WarningOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
+          <WarningOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 50 }} />
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const upper = () => {
           <span className='text-teal-200 text-[10px]'>High Risk</span>
         </div>
         <div className='flex justify-center items-center'>
-          <WaterOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
+          <WaterOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 50 }} />
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const upper = () => {
           <span className='text-blue-200 text-[10px]'>Surplus</span>
         </div>
         <div className='flex justify-center items-center'>
-          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 20 }} />
+          <OpacityOutlinedIcon className='text-white opacity-80' sx={{ fontSize: 50 }} />
         </div>
       </div>
 

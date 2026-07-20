@@ -22,7 +22,7 @@ function RainfallAnomaly() {
                 <div className="flex gap-4 items-center">
                     <div className="flex  font-bold items-center gap-2">
                         <span className="text-xs text-grey-600">Month</span>
-                        <select className="border border-gray-300 rounded-md text-xs p-1 outline-none cursor-pointer">
+                        <select className="border border-gray-300 rounded-md text-xs p-1 outline-none cursor-pointer no-scrollbar">
                             {generateDateOptions().map((date) => (<option key={date}>{date}</option>))}
                         </select>
                     </div>
@@ -30,7 +30,7 @@ function RainfallAnomaly() {
                         <span className="text-xs font-bold text-black-600">
                             Compared With
                         </span>
-                        <select className="border border-gray-300 rounded-md text-xs p1 outline-none font-meedium cursor-pointer">
+                        <select className="border border-gray-300 rounded-md text-xs p1 outline-none font-meedium cursor-pointer no-scrollbar">
                             <option>Normal (1981-2010)</option>
                             <option>Normal (1991-2020)</option>
                             <option>Previous Year</option>
@@ -44,8 +44,8 @@ function RainfallAnomaly() {
 
             </div>
 
-            <div className="w-full h-30 rounded-lg overflow-hidden border border-gray-200 mb-3 bg-gray-100 flex items-center justify-center" >
-                <img src="/download (3).webp" alt="Rainfall Anomaly Map" className="w-full h-full object-cover" />
+            <div className="w-full rounded-lg h-[15vh] border-gray-200 mb-3 bg-gray-100 flex items-center justify-center overflow-hidden">
+                <img src="/download (3).webp" alt="Rainfall Anomaly Map" className="w-full h-full object-contain" />
             </div>
 
 

@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { BarChart } from '@mui/x-charts/BarChart';
 import { ChevronDown, Search, Check, MapPin } from 'lucide-react';
 import './TimeSeries.css';
+import React from 'react';
+import Chart from 'react-apexcharts';
 
 const upDistricts = [
     { label: "Agra", value: "agra" },
@@ -90,6 +91,41 @@ function TimeSeries() {
     const searchInputRef = useRef(null);
     const listRef = useRef(null);
 
+    const [chartData, setChartData] = useState({
+        series: [
+            { name: 'Group A', data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65] },
+            { name: 'Group B', data: [13, 23, 20, 8, 13, 27, 33, 12, 54, 22, 12, 10] },
+            { name: 'Group C', data: [11, 17, 15, 15, 21, 14, 15, 13, 21, 41, 23, 11] }
+        ],
+        options: {
+            chart: {
+                type: "bar",
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    borderRadius: 4,
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            },
+            fill: {
+                opacity: 1
+            },
+            colors: ['#3b82f6', '#ef4444', '#f59e0b']
+        }
+    });
     const selectedLabel = upDistricts.find(d => d.value === selectedDistrict)?.label || 'Select District';
 
     const filteredDistricts = useMemo(() => {
@@ -108,6 +144,9 @@ function TimeSeries() {
             }
         }
         document.addEventListener('mousedown', handleClickOutside);
+
+
+
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
@@ -186,8 +225,8 @@ function TimeSeries() {
                 {/* Header Row */}
                 <div className="ts-header">
                     <div className="ts-title-group">
-                        <h2 className="ts-title text-sm font-bold">Time Series — Uttar Pradesh</h2>
-                        <p className="ts-subtitle text-sm font-bold">Monthly rainfall distribution by district</p>
+                        <h2 className="ts-title text-lg text-blue-700 font-bold">Time Series — Uttar Pradesh</h2>
+                        <p className="ts-subtitle text-xs text-gray-500 font-medium mt-1">Monthly rainfall distribution by district</p>
                     </div>
 
                     {/* Dropdown */}
@@ -267,16 +306,15 @@ function TimeSeries() {
                         )}
                     </div>
                 </div>
-
-                {/* Chart */}
-                <div className="ts-chart-container" style={{ width: '100%', height: '50%' }}>
-                    <BarChart
-                        xAxis={[{ data: ['group A', 'group B', 'group C'] }]}
-                        series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
-                        height={160}
-                        margin={{ top: 10, right: 10, bottom: 20, left: 20 }}
+                <div className="w-full flex-1 min-h-0">
+                    <Chart
+                        options={chartData.options}
+                        series={chartData.series}
+                        type="bar"
+                        height="100%"
                     />
                 </div>
+
             </div>
             {/* Dataset Summary */}
 

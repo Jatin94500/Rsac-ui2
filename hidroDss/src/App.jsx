@@ -13,8 +13,8 @@ function App() {
       <div className={isOpen ? "main-content sidebar-open" : "main-content"}>
 
         <Header onToggleSidebar={() => setIsOpen(!isOpen)} />
-        <Upper />
-       <Body /> 
+        <Upper className="h-[14vh]" />
+        <Body />
       </div>
 
     </>

@@ -2,7 +2,7 @@ function Datasetsummary() {
     return (
         <div className='border rounded-xl bg-gradient-to-b from-white to-blue-50 h-full w-full flex flex-col justify-between shadow-sm'>
             <div className='border-b mx-4 border-gray-300 p-2 pb-4 pt-4'>
-                <h1 className='text-xs text-blue-700 mb-4 font-bold'>Dataset Summary</h1>
+                <h1 className='text-lg text-blue-700 mb-4 font-bold'>Dataset Summary</h1>
                 <h3 className='text-xs  font-bold'> Source</h3>
                 <h2 className='font-bold'> CHIRPS v 2.0</h2>
             </div>
