@@ -226,7 +226,7 @@ function TimeSeries() {
                 <div className="ts-header">
                     <div className="ts-title-group">
                         <h2 className="ts-title text-lg text-blue-700 font-bold">Time Series — Uttar Pradesh</h2>
-                        <p className="ts-subtitle text-xs text-gray-500 font-medium mt-1">Monthly rainfall distribution by district</p>
+                        <p className="ts-subtitle text-lg text-gray-500 font-medium mt-1">Monthly rainfall distribution by district</p>
                     </div>
 
                     {/* Dropdown */}
