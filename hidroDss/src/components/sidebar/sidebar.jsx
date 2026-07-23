@@ -46,90 +46,101 @@ function Sidebar({ isOpen, setIsOpen }) {
                     </div>
                     <div className="Sidebar-Sub-menu">
                         <div className="bg-[#011d3c] rounded-xl pb-2 pt-1.5 ml-2 mr-2  mt-1  gap-y-4">
-                            <h1 className="text-xs text-slate-300 font-bold ml-4 mt-2 mb-1 uppercase tracking-wider">Data Explorer</h1>
-                            <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh", fontSize: "2vh" }}>
-                                <SideDropdown title="Chrisp Rainfall" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="ERAS Climate" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="SMAP Soil Moisture" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="SoilGrid" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="IMD Rainfall" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                            </div>
+                            <SideDropdown title="DATAEXPLORER">
+                                <div>
+                                    <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh", fontSize: "2vh" }}>
+                                        <SideDropdown title="Chrisp Rainfall" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="ERAS Climate" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="SMAP Soil Moisture" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="SoilGrid" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="IMD Rainfall" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                    </div>
+
+                                </div>
+                            </SideDropdown>
+
                         </div>
                         <div className="bg-[#011d3c] rounded-xl pb-2 ml-2 mr-2  mt-1 pt-2">
-                            <h1 className="text-xs text-slate-300 font-bold ml-4 mt-2 mb-1 uppercase tracking-wider">Hydrology Analysis</h1>
-                            <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh" }}>
-                                <SideDropdown title="Chrisp Rainfall" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="ERAS Climate" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="SMAP Soil Moisture" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="SoilGrid" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="IMD Rainfall" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                            </div>
+                            <SideDropdown title="HYDROLOGY ANALYSIS">
+                                <div>
+                                    <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh" }}>
+                                        <SideDropdown title="Chrisp Rainfall" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="ERAS Climate" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="SMAP Soil Moisture" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="SoilGrid" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="IMD Rainfall" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                    </div>
+                                </div>
+                            </SideDropdown>
                         </div>
                         <div className="bg-[#011d3c] rounded-xl pb-2 ml-2 mr-2 mt-1 pt-2">
-                            <h1 className="text-xs text-slate-300 font-bold ml-4 mt-2 mb-1 uppercase tracking-wider">Discison Support System</h1>
-                            <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh" }}>
-                                <SideDropdown title="Drought DSS" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="Flood DSS" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="Water Quality DSS" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
-                                <SideDropdown title="Irrigation Advisory" >
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
-                                    <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
-                                </SideDropdown>
+                            <SideDropdown title="DISCISON SUPPORT SYSTEM">
+                                <div>
+                                    <div style={{ marginLeft: "2vh", display: "flex", flexDirection: "column", gap: "0.5vh", marginTop: "1vh", marginRight: "2vh" }}>
+                                        <SideDropdown title="Drought DSS" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="Flood DSS" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="Water Quality DSS" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
+                                        <SideDropdown title="Irrigation Advisory" >
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">CRIPS</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SMAP</a></li>
+                                            <li><a href="#" className="block p-2 text-white hover:bg-slate-600 rounded">SoilGrid</a></li>
+                                        </SideDropdown>
 
-                            </div>
+                                    </div>
+                                </div>
+                            </SideDropdown>
                         </div>
 
                     </div>
