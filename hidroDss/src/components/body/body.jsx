@@ -25,7 +25,7 @@ function Body() {
 
         <div className="overflow-auto mt-0 pt-0">
             <div>
-                <section className="mb-2 h-[8vh]"><Upperbar /></section>
+                <section className="mb-2 h-auto"><Upperbar /></section>
             </div>
 
             <div>

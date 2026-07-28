@@ -13,23 +13,27 @@ function Sidebar({ isOpen, setIsOpen }) {
         <>
 
             <nav className={isOpen ? "sidebar open" : "sidebar"}>
-                <img
-                    src="/vecteezy_hydroponic-logo-vector-template-illustration_16081435.webp"
-                    alt=" Logo"
-                    className="logo"
-
-                />
-                <div className="header-content2">
-
-                    <h1 id="header-title2">
-                        <span style={{ color: "lightblue" }}>HYDROLOGY</span>
-                        <span style={{ color: "green" }}>DSS</span>
-                    </h1>
-                    <h3 id="header-subtitle2">
-                        <span style={{ color: "white" }}>Hydrology DSS Program</span>
-                    </h3>
+                
+                {/* Header Section */}
+                <div className="flex items-center gap-3 p-4 border-b border-white">
+                    <img
+                        src="/vecteezy_hydroponic-logo-vector-template-illustration_16081435.webp"
+                        alt="Logo"
+                        className="w-[5.5rem] h-[5.5rem] object-contain shrink-0"
+                    />
+                    <div className="flex flex-col">
+                        <h1 className="text-sm font-bold leading-none m-0 whitespace-nowrap mb-1">
+                            <span style={{ color: "lightblue" }}>HYDROLOGY </span>
+                            <span style={{ color: "green" }}>DSS</span>
+                        </h1>
+                        <h3 className="text-[0.65rem] text-white leading-none m-0 whitespace-nowrap">
+                            Hydrology DSS Program
+                        </h3>
+                    </div>
                 </div>
-                <div className="Sidebar-menu">
+
+                {/* Menu Section */}
+                <div className="Sidebar-menu flex-1 overflow-y-auto scrollbar-hide pb-4">
                     <div className="gap-1">
                         <div className=" mt-2 bg-[#011d3c] rounded-xl ml-2 mr-2 overflow-hidden" >
                             <WindowIcon sx={{ fontSize: "2.8vh", color: '#3b82f6', margin: "0.4vh", marginLeft: "1.8vh", gap: "0" }} />

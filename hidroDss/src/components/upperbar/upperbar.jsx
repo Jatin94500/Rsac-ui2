@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import CloudySnowingIcon from '@mui/icons-material/CloudySnowing';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 import OpacityIcon from '@mui/icons-material/Opacity';
@@ -6,6 +7,8 @@ import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
 import WbCloudyIcon from '@mui/icons-material/WbCloudy';
 
 function Upperbar() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const array = [
     { image: <CloudySnowingIcon />, text: 'CHIRPS Rainfall' },
     { image: <ThermostatIcon />, text: 'ERAS Climate' },
@@ -17,18 +20,28 @@ function Upperbar() {
   ];
 
   return (
-    <div className="flex flex-wrap items-center justify-start gap-2 p-3 bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl shadow-sm border border-slate-200/80">
-      {array.map((item, index) => (
-        <div
-          className="flex items-center gap-2 px-4 py-1.5 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-full shadow-sm hover:shadow-md hover:border-sky-400 transition-all duration-200 cursor-default"
-          key={index}
-        >
-          <div className="text-sky-600">{item.image}</div>
-          <div className="text-sm font-semibold text-slate-700 whitespace-nowrap">
-            {item.text}
+    <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-2 p-1.5 sm:p-2 bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl shadow-sm border border-slate-200/80">
+      {array.map((item, index) => {
+        const isSelected = selectedIndex === index;
+        return (
+          <div
+            className={`flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border rounded-full transition-all duration-200 cursor-pointer ${
+              isSelected 
+                ? 'bg-sky-600 border-sky-600 shadow-md scale-[1.02]' 
+                : 'bg-white/90 border-slate-200 shadow-sm hover:shadow-md hover:border-sky-400'
+            }`}
+            onClick={() => setSelectedIndex(index)}
+            key={index}
+          >
+            <div className={isSelected ? 'text-white' : 'text-sky-600'}>
+              {item.image}
+            </div>
+            <div className={`text-sm font-semibold whitespace-nowrap ${isSelected ? 'text-white' : 'text-slate-700'}`}>
+              {item.text}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
