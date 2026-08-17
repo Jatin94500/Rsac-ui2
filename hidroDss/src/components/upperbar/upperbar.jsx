@@ -6,8 +6,8 @@ import TsunamiIcon from '@mui/icons-material/Tsunami';
 import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
 import WbCloudyIcon from '@mui/icons-material/WbCloudy';
 
-function Upperbar() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+function Upperbar({ activeTab, onTabSelect }) {
+
 
   const array = [
     { image: <CloudySnowingIcon />, text: 'CHIRPS Rainfall' },
@@ -22,14 +22,14 @@ function Upperbar() {
   return (
     <div className="flex flex-wrap items-center justify-start gap-1 sm:gap-2 p-1.5 sm:p-2 bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl shadow-sm border border-slate-200/80">
       {array.map((item, index) => {
-        const isSelected = selectedIndex === index;
+        const isSelected = activeTab === item.text;
         return (
           <div
             className={`flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border rounded-full transition-all duration-200 cursor-pointer ${isSelected
-                ? 'bg-sky-600 border-sky-600 shadow-md scale-[1.02]'
-                : 'bg-white/90 border-slate-200 shadow-sm hover:shadow-md hover:border-sky-400'
+              ? 'bg-sky-600 border-sky-600 shadow-md scale-[1.02]'
+              : 'bg-white/90 border-slate-200 shadow-sm hover:shadow-md hover:border-sky-400'
               }`}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => onTabSelect(item.text)}
             key={index}
           >
             <div className={isSelected ? 'text-white' : 'text-sky-600'}>

@@ -45,10 +45,8 @@ const OpenLayerMap = () => {
 
     return (
         <div className="relative w-full h-[650px] border border-gray-200 rounded-xl shadow-lg overflow-hidden mb-8">
-            {/* The div where the map will be rendered */}
             <div ref={mapElement} className="w-full h-full" />
 
-            {/* Optional Overlay/Legend Box */}
             <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl z-10 border border-gray-100">
                 <h4 className="font-bold text-gray-800 text-sm">Map Legend</h4>
                 <p className="text-xs text-gray-500 mt-1">OpenStreetMap Base Layer</p>

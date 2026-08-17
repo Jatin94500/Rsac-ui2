@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Upperbar from "../upperbar/upperbar";
 
 import ChirpsRainfallUI from "../analysis ui/CHIRPS UI/ChirpsRainfallUI";
+import DemAnalysisUI from "../analysis ui/DEM Analysis/DemAnalysisUI";
 
 
 function Body() {
@@ -18,6 +19,7 @@ function Body() {
             </div>
             <div>
                 {activeTab === 'CHIRPS Rainfall' && <ChirpsRainfallUI />}
+                {activeTab === 'DEM Analysis' && <DemAnalysisUI />}
             </div>
 
 

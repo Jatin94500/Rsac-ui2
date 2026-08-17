@@ -1,9 +1,9 @@
 import React from 'react';
 import { Menu, PlusCircle, Layers, Monitor, Settings, Save, Map as MapIcon, Grid } from 'lucide-react';
 
-const Legend = () => {
+const Legend = ({ className }) => {
     return (
-        <div className='absolute top-0 left-0 h-full flex flex-col z-10 w-[60px] shadow-2xl '>
+        <div className={`absolute top-0 left-0 h-full flex flex-col z-10 w-[60px] shadow-2xl ${className} `}>
             <div className='bg-white h-[60px] flex items-center justify-center cursor-pointer hover:bg-grey-50 transition-colors'>
                 <Menu className='bg-[#2a2a2a]  flex-1 flex flex-col items-center py-4 space-y-6' />
 
