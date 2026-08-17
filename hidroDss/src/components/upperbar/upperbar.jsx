@@ -25,11 +25,10 @@ function Upperbar() {
         const isSelected = selectedIndex === index;
         return (
           <div
-            className={`flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border rounded-full transition-all duration-200 cursor-pointer ${
-              isSelected 
-                ? 'bg-sky-600 border-sky-600 shadow-md scale-[1.02]' 
+            className={`flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border rounded-full transition-all duration-200 cursor-pointer ${isSelected
+                ? 'bg-sky-600 border-sky-600 shadow-md scale-[1.02]'
                 : 'bg-white/90 border-slate-200 shadow-sm hover:shadow-md hover:border-sky-400'
-            }`}
+              }`}
             onClick={() => setSelectedIndex(index)}
             key={index}
           >
