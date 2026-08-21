@@ -18,7 +18,7 @@ function DemMap() {
                 })
             ],
             view: new View({
-                center: [0, 0],
+                center: [80.8, 27.1],
                 zoom: 2
             }),
         });
@@ -31,9 +31,9 @@ function DemMap() {
     return (
         <div
             ref={mapElement}
-            className="relative w-full h-[60vh] rounded-xl overflow-hidden border border-slate-300 shadow-sm"
+            className="relative w-full h-[75vh] rounded-xl overflow-hidden border border-slate-300 shadow-sm"
         >
-            <Legend className="scale-75 origin-top-left mt-2 ml-2 h-[120%]" />
+            <Legend className="scale-95 origin-top-left mt-2 ml-2 h-[120%]" />
         </div>
     );
 }

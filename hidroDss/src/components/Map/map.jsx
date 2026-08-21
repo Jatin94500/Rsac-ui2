@@ -44,7 +44,7 @@ const OpenLayerMap = () => {
     }, []);
 
     return (
-        <div className="relative w-full h-[650px] border border-gray-200 rounded-xl shadow-lg overflow-hidden mb-8">
+        <div className="relative w-full h-full border border-gray-200 rounded-xl shadow-lg overflow-hidden">
             <div ref={mapElement} className="w-full h-full" />
 
             <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl z-10 border border-gray-100">

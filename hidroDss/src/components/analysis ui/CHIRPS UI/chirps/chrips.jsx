@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
 import Crop32Icon from "@mui/icons-material/Crop32";
 function Chrips() {
+  const [isColorScaleOpen, setIsColorScaleOpen] = useState(false);
   // Handle radio change
 
   return (
@@ -44,16 +46,16 @@ function Chrips() {
             Visualisation
           </label>
           <div className="flex gap-4">
-            <label className="flex items-center gap-1">
-              <input className='w-6 h-6 accent-blue-600 ' type="radio" name="visualization" value="Map" />
+            <label className="flex items-center gap-2 cursor-pointer text-sm">
+              <input className='w-4 h-4 accent-blue-600 cursor-pointer' type="radio" name="visualization" value="Map" defaultChecked />
               Map
             </label>
-            <label className="flex items-center gap-1">
-              <input className='w-6 h-6 accent-blue-600' type="radio" name="visualization" value="Time Series" />
+            <label className="flex items-center gap-2 cursor-pointer text-sm">
+              <input className='w-4 h-4 accent-blue-600 cursor-pointer' type="radio" name="visualization" value="Time Series" />
               Time Series
             </label>
-            <label className="flex items-center gap-1">
-              <input className='w-6 h-6 accent-blue-600 ' type="radio" name="visualization" value="Statistics" />
+            <label className="flex items-center gap-2 cursor-pointer text-sm">
+              <input className='w-4 h-4 accent-blue-600 cursor-pointer' type="radio" name="visualization" value="Statistics" />
               Statistics
             </label>
           </div>
@@ -63,37 +65,44 @@ function Chrips() {
           <label className="block text-xl font-medium text-sm  text-blue-800">
             Color Scale
           </label>
-          <div className="border border-gray-700 rounded-md ">
-            <h1 className="flex  pl-4 p-2 border border-b-gray-700">
+          <div className="border border-gray-700 rounded-md overflow-hidden">
+            <h1 
+              className="flex items-center pl-4 p-2 border-b border-gray-700 cursor-pointer hover:bg-gray-50 transition-colors"
+              onClick={() => setIsColorScaleOpen(!isColorScaleOpen)}
+            >
               <p>Rainfall(mm) </p>
-              <p className= "ml-[70%] "><ArrowDropDownTwoToneIcon /></p>
+              <p className="ml-auto"><ArrowDropDownTwoToneIcon className={`transition-transform duration-200 ${isColorScaleOpen ? 'rotate-180' : ''}`} /></p>
             </h1>
-            <p className="ml-6 text-xl ">
-              
-              <Crop32Icon  className="[&>path]:fill-amber-400 "/> {">"} 100 mm
-            </p>
-            <p className="ml-6 ">
-              <Crop32Icon /> 75-100 mm
-            </p>
-            <p className="ml-6 ">
-              <Crop32Icon /> 50-75 mm
-            </p>
-            <p className="ml-6 ">
-              <Crop32Icon /> 25-50 mm
-            </p>
-            <p className="ml-6 ">
-              <Crop32Icon /> 10-25 mm
-            </p>
-            <p className="ml-6 ">
-              <Crop32Icon /> 5-10 mm
-            </p>
-            <p className="ml-6 text-xl ">
-              <Crop32Icon /> 5-1 mm
-            </p>
-            <p className="ml-6 ">
-              <Crop32Icon /> 0-1 mm
-            </p>
-             <p className="ml-6 "><Crop32Icon/> No Data</p>
+            
+            {isColorScaleOpen && (
+              <div className="py-2 bg-white">
+                <p className="ml-6 text-xl ">
+                  <Crop32Icon  className="[&>path]:fill-amber-400 "/> {">"} 100 mm
+                </p>
+                <p className="ml-6 ">
+                  <Crop32Icon /> 75-100 mm
+                </p>
+                <p className="ml-6 ">
+                  <Crop32Icon /> 50-75 mm
+                </p>
+                <p className="ml-6 ">
+                  <Crop32Icon /> 25-50 mm
+                </p>
+                <p className="ml-6 ">
+                  <Crop32Icon /> 10-25 mm
+                </p>
+                <p className="ml-6 ">
+                  <Crop32Icon /> 5-10 mm
+                </p>
+                <p className="ml-6 text-xl ">
+                  <Crop32Icon /> 5-1 mm
+                </p>
+                <p className="ml-6 ">
+                  <Crop32Icon /> 0-1 mm
+                </p>
+                <p className="ml-6 "><Crop32Icon/> No Data</p>
+              </div>
+            )}
           </div>
         </div>
 
