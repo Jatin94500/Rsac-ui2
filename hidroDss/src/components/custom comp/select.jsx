@@ -60,20 +60,19 @@ function Select({
                 {selectedOption ? selectedOption.label : placeholder}
             </button>
             {isOpen && (
-                <div className="absolute z-10 w-full mt-2 bg-white rounded-xl shadow-lg border border-slate-200 py-1 overflow-hidden">
-                    {options.length > 0 ? (
-                        options.map((option) => (
-                            <button
-                                key={option.value}
-                                type="button"
-                                onClick={() => handleOptionClick(option)}
-                                className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-slate-50
+                <div className="absolute z-10 w-full mt-2 bg-white rounded-xl shadow-lg border border-slate-200 py-1 max-h-60 overflow-y-auto [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-slate-200 hover:[&::-webkit-scrollbar-thumb]:bg-slate-400 [&::-webkit-scrollbar-thumb]:rounded-full">
+                    {options.length > 0 ? (options.map((option) => (
+                        <button
+                            key={option.value}
+                            type="button"
+                            onClick={() => handleOptionClick(option)}
+                            className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-slate-50
                                     ${value === option.value ? "bg-indigo-50 text-indigo-700 font-medium" : "text-slate-700"}
                                 `}
-                            >
-                                {option.label}
-                            </button>
-                        ))
+                        >
+                            {option.label}
+                        </button>
+                    ))
                     ) : (
                         <div className="px-4 py-3 text-sm text-slate-500 text-center">
                             No options available
